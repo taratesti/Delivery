@@ -1,0 +1,5 @@
+project      = "lustrous-camera-352403"
+region       = "us-central1"
+zone         = "us-central1-a"
+name         = "test"
+machine_type = "f1-micro"

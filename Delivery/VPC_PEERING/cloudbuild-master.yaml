@@ -1,0 +1,19 @@
+# This build can be used deploy all modules sequentially as given below in MODULE_SEQUENCE 
+# Usage : In this directory, run the following command to build
+# $ gcloud builds submit . --config=cloudbuild-master.yaml
+steps:
+  - id: 'module_builder'
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: "bash"
+    args:
+      - '-c'
+      - |
+           MODULE_SEQUENCE=("deployment/vpc_network"
+                            "deployment/compute_vm"
+                           )
+                           
+           for i in "${MODULE_SEQUENCE[@]}"
+           do
+             gcloud builds submit . --config=cloudbuild-module.yaml --substitutions=_MODULE_DIR_PATH=$i,_TERRAFORM_APPLY="Y",_BUCKET="lustrous-camera-352403"
+           done
+  
