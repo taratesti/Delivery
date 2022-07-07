@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"master-mig","Source":"registry.terraform.io/GoogleCloudPlatform/managed-instance-group/google","Version":"1.1.14","Dir":".terraform/modules/master-mig"},{"Key":"","Source":"","Dir":"."},{"Key":"default-pool-mig","Source":"registry.terraform.io/GoogleCloudPlatform/managed-instance-group/google","Version":"1.1.14","Dir":".terraform/modules/default-pool-mig"}]}
