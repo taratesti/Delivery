@@ -149,8 +149,8 @@ resource "google_sql_user" "gitlab" {
 #gke
 
 module "gke" {
-  project            = var.project
-  source  = "terraform-google-modules/kubernetes-engine/google"
+  source             = "terraform-google-modules/kubernetes-engine/google"
+  project_id         = var.project
   # Create an implicit dependency on service activation
   name               = "gitlab"
   region             = var.region
