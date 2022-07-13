@@ -1,6 +1,6 @@
 module "gke-git" {
 source                 = "../../modules/gke_gitlab"
-project                = "${var.project_id}"
+project_id             = "${var.project_id}"
 region                 = var.region
 gke_version            = "1.20"
 gke_machine_type       = "n1-standard-4"
