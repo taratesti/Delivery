@@ -1,4 +1,4 @@
-project_id             = "lustrous-camera-352403"
+project                = "lustrous-camera-352403"
 region                 = "us-central1"
 gke_version            = "1.20"
 gke_machine_type       = "n1-standard-4"
