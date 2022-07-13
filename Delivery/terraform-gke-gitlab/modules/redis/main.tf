@@ -1,9 +1,9 @@
 data "google_compute_network" "git" {
-  # project_id = var.project_id
+  project    = var.project
   name       = "gitlab"
 }
 resource "google_redis_instance" "gitlab" {
-  # project_id         = var.project_id
+  project            = var.project
   name               = "gitlab"
   tier               = "STANDARD_HA"
   memory_size_gb     = 5
